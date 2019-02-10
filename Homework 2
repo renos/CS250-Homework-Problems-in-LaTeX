@@ -1,0 +1,140 @@
+//based on https://www.overleaf.com/latex/templates/homework-template-for-my-upper-division-math-courses/nspfspnxtbkr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}} %for instructor comments while grading
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{Renos Zabounidis}  %replace with your name
+\rhead{CS250: Intro to Computation \\ Section 2 \\ Spring 2019 \\ Homework 2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block.
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{P2.3.N} 
+In CS 187, you’ve encountered big-O notation. Consider two functions with natural arguments and positive real values: f,g: $\mathbb{N} \rightarrow \mathbb{R}^+$ Consider the following propositions, where c ranges over positive reals, and $n, n_{0}$ range over the naturals:\\
+\\
+$ P: \exists c: \exists n_{0}: \forall n: n \geq n_{0} \rightarrow f(n) \leq cg(n)\ \ \  \textrm{(this is the definition of “f(n) is O(g(n))”)} $\\
+$Q: \forall n_{0}: \exists c: \forall n: n \geq n_{0} \rightarrow f(n) \leq cg(n) $\\
+$R: \forall c: \exists n_{0}: \forall n: n \geq n_{0} \rightarrow f(n) \leq cg(n)$\\
+a) Are any two of these propositions equivalent, for arbitrary choices of f and g? (prove it, or give examples of f and g for which they differ).\\
+b) Is any of the propositions always true, whatever f and g?\\
+c) Can you find two functions f and g for which R is true?
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.5.N}
+Let X, Y, Z be any three languages. Using the definition of language concatenation, write quantified expressions for the membership predicates of the languages (X$\cup$Y )Z and XZ$\cup$Y Z.Are the two languages equal? Give a quantifier proof, or a counterexample.Do the same for the languages (X $\backslash$ Y )Z and XZ $\backslash$ Y Z.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.6.1}
+Following Lewis Carroll, take the premises "All angry dogs growl" $(\forall x : (A(x) \land D(x)) \rightarrow G(x)$, "All happy gods wave their tails", "All angry cats do not wave their tails", "All happy cats growl, "All animals are either angry or happy", and "No animal is both a dog and a cat. Use predicate calculus and indicate which proof rule justified each step. Proof by contradiction is probably simplest. 
+
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.6.4}
+We can now adjust our rules from Section 1.5 for translating set identities into the propositional calculus, by adding a quantifier to the translations of $A \leq B$ and $A = B$ to get $\forall x : A(x) \rightarrow B(x)$ and $\forall x: A(x) \leftrightarrow B(x)$. Here 
+A(x) is an abbreviation for the predicate "$x \in A$". We can also use an existential quantifier to express the statement that a set is not empty $-$ "$\exists x : A(x)"$ is equivalent to "A$\neq \emptyset$". Translate the following set statments into the predicate calculus, and prove them with the rules from this section.\\
+a) $\left[\left(A \subseteq B\right) \land \left(\left(A\ \cap C\right) \neq \emptyset\right)\right] \rightarrow \left[\left(B \cap C\right)\neq \emptyset\right]$\\
+b) $\left[\left(A \subseteq B\right) \land \left(\left(A\ \subseteq C\right)\right)\right] \rightarrow \left[\left(A \triangle B\right)\subseteq C\right]$\\
+c) $\left[(\left(A \cup B\right) \neq \emptyset) \land \left(\left(A\ \cap B\right) \neq \emptyset\right)\right] \rightarrow (A \triangle B) \neq \emptyset$\\
+d)$\left[\left(\left(A\backslash B\right)\neq \emptyset\right)\land\left(\left(C\backslash A\right)\neq \emptyset\right)\land\left(\left(B\backslash C\right) \neq \emptyset\right)\right] \rightarrow\left[\left(C \subseteq B\right) \rightarrow\left(\overline{\left(B \cup C\right)} \neq \emptyset\right)\right]$
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.8.4}
+Let A and B be sets and let $R \subseteq A x B$ be a relation. The inverse relation of R is the subset $R^{-1}$ of B x A defined so that $R^{-1}$ = $\left\{\langle b,a\rangle : \langle a,b \rangle \in R\right\}$. Prove or disprove each of the following statements.\\
+a) R is total if and only if $R^{-1}$ is total.\\
+b) R is well-defined if and only if $R^{-1}$ is well defined.\\
+c) R is a function if and only if $R^{-1}$ is a function.\\
+d) If R$\subseteq$ A x A, R is reflexive if and only if $R^{-1}$ is reflexive.\\
+e) If R$\subseteq$ A x A, R is symmetric if and only if $R^{-1}$ is symmetric.\\
+f) If R$\subseteq$ A x A, R is antisymmetric if and only if $R^{-1}$ is antisymmetric.\\
+g) If R$\subseteq$ A x A, R is transitive if and only if $R^{-1}$ is transitive.\\
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.9.3}
+Let $f$ : A $\rightarrow$ B and g : B $\rightarrow$ C be functions such that $g \circ f$ is a bijection. Prove that $f$ must be one to one and that g must be onto. Give an example showing that it is possible for neither f nor g to be a bijection. 
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.10.4}
+In general, a string u is defined to be a substring of  string v if v = xuy for some strings x and y, either or both possibly empty.\\
+a) Prove that the substring relation on an set of strings is a partial order.\\
+b) Draw the Hasse diagram for the substring relation on the strings of two or fewer letters over the alphabet $\left\{a,b,c\right\}$.\\
+c) Draw the Hasse diagram for the same relation on the substrings of the string abbac. Repeat for the string cababa.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.10.XC}
+Let A = $\left\{a_1,a_2,...,a_n\right\}$ be a finite set and P the set of all possible partitions of A. Your task is to define a partial order on P so that $\left\{\left\{a_1\right\},\left\{a_2\right\},...,\left\{a_n\right\}\right\}$ is the maximal element and $\left\{\left\{a_1,a_2,...,a_n\right\}\right\}$ is the minimal element. Prove that your solution is indeed a partial order.\\
+Hint: any partition represents an equivalence relation; define an order on such relations
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+\begin{problem}{P2.11.5}
+Suppose we have a set of airports and a symmetric set of direct flight connections. (That is, if you can fly directly from airport x to airport y you can also fly directly from y to x $-$ we will call this predicate D(x,y).) The relation D may fair to be an equivalence relation because it need not be transitive. But for any such D, it turns out that there exists a equivalence relation F such that:\\
+\begin{itemize}  
+\item D(x,y) $\rightarrow$ F(x,y)
+\item If D(x,y) $\rightarrow$ G(x,y) and G is an equivalence relation, then F(x,y) $\rightarrow$ G(x,y)
+\end{itemize}
+Find this F, describe it in terms of D, and prove both that t is an equivalence relation and that it has the specified properties.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter anything below this line.
+\end{document}
