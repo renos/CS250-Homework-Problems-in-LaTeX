@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block of commands.  If you're proficient at LaTeX, you may include additional packages, create macros, etc. immediately below this block of commands, but make sure to NOT alter the header, margin, and comment settings here. 
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}} %for instructor comments while grading
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{Student's name}  %replace with your name
+\rhead{CS250\\ Section X \\ Spring 2019 \\ Homework #3} %replace XYZ with the homework course number, semester (e.g. ``Spring 2019"), and assignment number.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block.
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Solutions to problems go below.  Please follow the guidelines from https://www.overleaf.com/read/sfbcjxcgsnsk/
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{3.1.5 (10)} 
+Let x and y be any two positive numbers. Using the definitions in Problems 3.1.3.and 3.1.4, show that $gcd(x, y) = \frac{xy}{lcm(x,y)}$
+
+(a) by using the characterizations of gcd and lcm in terms of the prime factorization, and
+
+(b) directly by proving that for any natural z, z is a common factor of x and y if and only if z divides xy and xy/z is a common multiple of x and y.
+
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{3.3.2 (15)}
+
+Let $n$ be any natural. Define $I_n$ to be the set of all naturals $a$ such that $a < n$
+and $a$ and $n$ are relatively prime. The \textbf{Euler totient function}  $\phi(n)$ is the size of $I_n$.
+
+(a) Describe the sets I11 and I12.
+
+(b) Explain why $\phi(n)=n-1$ if and only if is prime.
+
+(c) Explain why if n is a power of 2, other than $2^0 = 1$, then $\phi(n) = n/2$.
+
+(d) Explain why a natural $a < n$ has an inverse modulo n if and only if it is in In.
+
+(e) Show that if a and b are in In, then a·b is congruent modulo n to a member of In.
+
+(f) Give an example where a and b are in In but a + b is not congruent modulo n to any
+member of In.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{3.3.N (10)}
+Show that if $p$ and $q$ are distinct primes, there are exactly $p + q - 2$ positive naturals that are less than $pq$ and not relatively prime with $pq$.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{3.5.3 (10)}
+Suppose we are given a system of congruences:
+\newline
+\newline
+\centerline{$\begin{aligned}
+   x \equiv a_1 (\mod m_1)
+\\   x \equiv a_2 (\mod m_2)
+\\\ldots
+\\   x \equiv a_k (\mod m_k)
+\end{aligned}
+$}
+without any guarantee that the $m_i$’s are pairwise relatively prime.
+
+(a) A prime power is a number that can be written $p^e$ for some prime number p and some positive number e. A consequence of the Fundamental Theorem of Arithmetic (which we’ll prove soon) is that any number has a unique factorization into prime powers. Show that we can convert any congruence into an equivalent system of congruences where each base is a prime power and the bases are pairwise relatively prime.
+
+(b) Let p be a prime number, and suppose that we have a system of congruences where each base is a power of p. Explain how to tell whether the system has a solution, and how to find it.
+
+(c) Using parts (a) and (b), explain how to determine whether an arbitrary system of congruences has a solution, and if so how to find all solutions.
+
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{3.6.5 (10XC)}
+(Requires exposure to complex numbers.) The \textbf{Gaussian} integers are the subset of the complex numbers that are of the form $a + bi$ where a and b are integers and i is the square root of $-1$. The notions of division and primality can be made to make sense in this domain as well:
+
+(a) The length of a Gaussian integer a+bi is defined to be $\sqrt{a^2+b^2}$.
+Show that if a + bi and c + di are two Gaussian integers, the length of their product is the product of their lengths.
+
+(b) A unit is a Gaussian integer of length 1. What are the units?
+
+(c) A prime is a Gaussian integer whose length is greater than 1 and which cannot be written as the product of two Gaussian integers unless one is a unit. Prove that any nonzero Gaussian integer has at least one factorization as a product of primes times a unit.
+
+(d) Prove that 1+i is a prime and that 2 is not.
+
+(e) Prove that if the square of the length of a Gaussian integer is a prime number in the
+usual sense, then the Gaussian integer is a prime.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.1.5 (10)}
+(uses Java) Give a recursive definition of the “less than” operator on numbers. (You may refer to equality of numbers in your definition.) Write a pseudo-Java method \texttt{boolean isLessThan (natural x, natural y)} that returns \texttt{true} if and only if $x < y$ and uses only our given methods. (Hint: Follow the example of the functions \texttt{plus} and \texttt{times} in the text.)
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.3.3 (5)}
+Let the finite sequence a0,a1,...,an be defined by the rule ai = a0 · ri, where r is some
+number not equal to 1. Prove by induction that the sum of the terms in the sequence is
+$\frac{a_0-a_{n+1}}{1-r}$ (where $a_{n+1}$ is defined by the same rule even though it is not part of the sequence).
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.3.5 (10)}
+Let $\Sigma = \{a,b,c\}$ and let $L_n$ for each natural n be the language consisting of exactly those strings with two a’s, two b’s, and n c’s. Discover a formula for the size of $L_n$ in terms of n, and prove your formula correct by induction. (Hint: You may find it useful to first solve this problem for various similar languages: strings with n c’s and respectively no a’s or b’s, one a and no b’s, one of each, and two a’s and one b.)
+
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.3.N (10)}
+For  $n > 1$, let  $S_n = \sum_{k=2}^n \frac{1}{(k-1)k(k+1)}$. Find and prove by induction a formula that expresses $S_n$ in terms of $n$.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.4.1 (10)}
+Consider a variant of Exercise 4.4.3, for \$4 and \$11 bills (made, we might suppose, by a particularly inept counterfeiter). What is the minimum number k such that you can make up \$$n$ for all $n \ge k$? Prove that you can do so.
+
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%Copy the following block of text for each problem in the assignment.
+\begin{problem}{4.5.N (10)}
+P4.5.N (10) (See Excursion 4.5). Prove, by strong induction on all naturals $n$, that the Fibonacci number $F(n)$ is equal to $\frac{1}{\sqrt{5}}[(1+\phi)^n - (-\phi)^n]$, where $\phi = \frac{\sqrt{5}-1}{2}$.
+\end{problem}
+\begin{sol}
+Write your solution here.
+\end{sol}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter anything below this line.
+\end{document}
