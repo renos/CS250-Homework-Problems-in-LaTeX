@@ -1,4 +1,5 @@
 %based on https://www.overleaf.com/latex/templates/homework-template-for-my-upper-division-math-courses/nspfspnxtbkr
+
 \documentclass[12pt]{article}
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
@@ -14,7 +15,6 @@
     }
 \specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}} %for instructor comments while grading
 \NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -23,7 +23,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Fill in the appropriate information below
 \lhead{Student's name}  %replace with your name
-\rhead{CS250\\ Section X \\ Spring 2019 \\ Homework #3}
+\rhead{CS250\\ Section X \\ Spring 2019 \\ Homework #3} %replace XYZ with the homework course number, semester (e.g. ``Spring 2019"), and assignment number.
+%Do not alter this block.
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -47,18 +48,18 @@ Write your solution here.
 Let $n$ be any natural. Define $I_n$ to be the set of all naturals $a$ such that $a < n$
 and $a$ and $n$ are relatively prime. The \textbf{Euler totient function}  $\phi(n)$ is the size of $I_n$.
 
-(a) Describe the sets I11 and I12.
+(a) Describe the sets $I_{11}$ and $I_{12}$.
 
 (b) Explain why $\phi(n)=n-1$ if and only if is prime.
 
 (c) Explain why if n is a power of 2, other than $2^0 = 1$, then $\phi(n) = n/2$.
 
-(d) Explain why a natural $a < n$ has an inverse modulo n if and only if it is in In.
+(d) Explain why a natural $a < n$ has an inverse modulo n if and only if it is in $I_n$.
 
-(e) Show that if a and b are in In, then a·b is congruent modulo n to a member of In.
+(e) Show that if a and b are in $I_n$, then a·b is congruent modulo n to a member of $I_n$.
 
-(f) Give an example where a and b are in In but a + b is not congruent modulo n to any
-member of In.
+(f) Give an example where a and b are in $I_n$ but a + b is not congruent modulo n to any
+member of $I_n$.
 \end{problem}
 \begin{sol}
 Write your solution here.
@@ -82,10 +83,10 @@ Suppose we are given a system of congruences:
 \newline
 \newline
 \centerline{$\begin{aligned}
-   x \equiv a_1 (\mod m_1)
-\\   x \equiv a_2 (\mod m_2)
-\\\ldots
-\\   x \equiv a_k (\mod m_k)
+   x \equiv a_1\mod m_1
+\\   x \equiv a_2\mod m_2
+\\ \ldots \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\\   x \equiv a_k\mod m_k
 \end{aligned}
 $}
 without any guarantee that the $m_i$’s are pairwise relatively prime.
@@ -107,12 +108,12 @@ Write your solution here.
 \begin{problem}{3.6.5 (10XC)}
 (Requires exposure to complex numbers.) The \textbf{Gaussian} integers are the subset of the complex numbers that are of the form $a + bi$ where a and b are integers and i is the square root of $-1$. The notions of division and primality can be made to make sense in this domain as well:
 
-(a) The length of a Gaussian integer a+bi is defined to be $\sqrt{a^2+b^2}$.
+(a) The \textvf{length} of a Gaussian integer a+bi is defined to be $\sqrt{a^2+b^2}$.
 Show that if a + bi and c + di are two Gaussian integers, the length of their product is the product of their lengths.
 
-(b) A unit is a Gaussian integer of length 1. What are the units?
+(b) A \lengthbf{unit} is a Gaussian integer of length 1. What are the units?
 
-(c) A prime is a Gaussian integer whose length is greater than 1 and which cannot be written as the product of two Gaussian integers unless one is a unit. Prove that any nonzero Gaussian integer has at least one factorization as a product of primes times a unit.
+(c) A \lenfthbf{prime} is a Gaussian integer whose length is greater than 1 and which cannot be written as the product of two Gaussian integers unless one is a unit. Prove that any nonzero Gaussian integer has at least one factorization as a product of primes times a unit.
 
 (d) Prove that 1+i is a prime and that 2 is not.
 
@@ -127,7 +128,7 @@ Write your solution here.
 
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{4.1.5 (10)}
-(uses Java) Give a recursive definition of the “less than” operator on numbers. (You may refer to equality of numbers in your definition.) Write a pseudo-Java method \texttt{boolean isLessThan (natural x, natural y)} that returns \texttt{true} if and only if $x < y$ and uses only our given methods. (Hint: Follow the example of the functions \texttt{plus} and \texttt{times} in the text.)
+(uses Java) Give a recursive definition of the "less than" operator on numbers. (You may refer to equality of numbers in your definition.) Write a pseudo-Java method \texttt{boolean isLessThan (natural x, natural y)} that returns \texttt{true} if and only if $x < y$ and uses only our given methods. (Hint: Follow the example of the functions \texttt{plus} and \texttt{times} in the text.)
 \end{problem}
 \begin{sol}
 Write your solution here.
@@ -137,7 +138,7 @@ Write your solution here.
 
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{4.3.3 (5)}
-Let the finite sequence a0,a1,...,an be defined by the rule ai = a0 · ri, where r is some
+Let the finite sequence $a_0,a_1,...,a_n$ be defined by the rule $a_i$ = $a_0 \cdot r_i$, where r is some
 number not equal to 1. Prove by induction that the sum of the terms in the sequence is
 $\frac{a_0-a_{n+1}}{1-r}$ (where $a_{n+1}$ is defined by the same rule even though it is not part of the sequence).
 \end{problem}
@@ -149,7 +150,7 @@ Write your solution here.
 
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{4.3.5 (10)}
-Let $\Sigma = \{a,b,c\}$ and let $L_n$ for each natural n be the language consisting of exactly those strings with two a’s, two b’s, and n c’s. Discover a formula for the size of $L_n$ in terms of n, and prove your formula correct by induction. (Hint: You may find it useful to first solve this problem for various similar languages: strings with n c’s and respectively no a’s or b’s, one a and no b’s, one of each, and two a’s and one b.)
+Let $\Sigma = \{a,b,c\}$ and let $L_n$ for each natural n be the language consisting of exactly those strings with two a's, two b's, and n c's. Discover a formula for the size of $L_n$ in terms of n, and prove your formula correct by induction. (Hint: You may find it useful to first solve this problem for various similar languages: strings with n c's and respectively no a's or b's, one a and no b's, one of each, and two a's and one b.)
 
 \end{problem}
 \begin{sol}
