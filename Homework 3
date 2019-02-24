@@ -1,5 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Do not alter this block of commands.  If you're proficient at LaTeX, you may include additional packages, create macros, etc. immediately below this block of commands, but make sure to NOT alter the header, margin, and comment settings here. 
+%based on https://www.overleaf.com/latex/templates/homework-template-for-my-upper-division-math-courses/nspfspnxtbkr
 \documentclass[12pt]{article}
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ}
@@ -24,20 +23,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Fill in the appropriate information below
 \lhead{Student's name}  %replace with your name
-\rhead{CS250\\ Section X \\ Spring 2019 \\ Homework #3} %replace XYZ with the homework course number, semester (e.g. ``Spring 2019"), and assignment number.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Do not alter this block.
+\rhead{CS250\\ Section X \\ Spring 2019 \\ Homework #3}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%Solutions to problems go below.  Please follow the guidelines from https://www.overleaf.com/read/sfbcjxcgsnsk/
-
-
-%Copy the following block of text for each problem in the assignment.
 \begin{problem}{3.1.5 (10)} 
 Let x and y be any two positive numbers. Using the definitions in Problems 3.1.3.and 3.1.4, show that $gcd(x, y) = \frac{xy}{lcm(x,y)}$
 
